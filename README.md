@@ -133,6 +133,32 @@ Open:
 http://127.0.0.1:8000/docs
 ```
 
+## Running with Docker
+
+Build the container:
+
+```
+docker build -t semantic-search .
+```
+
+Run the container:
+
+```
+docker run -p 8000:8000 semantic-search
+```
+
+Or using docker-compose:
+
+```
+docker-compose up --build
+```
+
+Open the API documentation:
+
+```
+http://127.0.0.1:8000/docs
+```
+
 ## Design Decisions
 
 Embedding Model:
