@@ -25,17 +25,23 @@ sklearn.datasets.fetch_20newsgroups
 
 ## System Architecture
 
-User Query  
-↓  
-Embedding Model  
-↓  
-Semantic Cache Check  
-↓  
-Vector Database Search  
-↓  
-Cluster Analysis  
-↓  
-Return Results  
+User Query
+   ↓
+Query Embedding
+   ↓
+Semantic Cache Lookup
+   ↓
+(Cache Hit → Return Result)
+   ↓
+(Cache Miss)
+   ↓
+FAISS Vector Search
+   ↓
+Cluster Identification
+   ↓
+Store Result in Cache
+   ↓
+Return Result
 
 ## Tech Stack
 
