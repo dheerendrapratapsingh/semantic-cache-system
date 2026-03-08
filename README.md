@@ -25,24 +25,30 @@ sklearn.datasets.fetch_20newsgroups
 
 ## System Architecture
 
+```
 User Query
    ↓
 Query Embedding
    ↓
 Semantic Cache Lookup
    ↓
-(Cache Hit → Return Result)
-   ↓
-(Cache Miss)
-   ↓
+ ┌───────────────┐
+ │   Cache Hit   │ → Return Cached Result
+ └───────────────┘
+        │
+        ▼
+ ┌───────────────┐
+ │  Cache Miss   │
+ └───────────────┘
+        ↓
 FAISS Vector Search
-   ↓
+        ↓
 Cluster Identification
-   ↓
+        ↓
 Store Result in Cache
-   ↓
+        ↓
 Return Result
-
+```
 ## Tech Stack
 
 Python  
