@@ -2,8 +2,10 @@
 
 ## Project Overview
 
-This project implements a lightweight semantic search system using the 20 Newsgroups dataset.  
-The system performs semantic document retrieval using vector embeddings, fuzzy clustering, and a semantic caching mechanism.
+This project implements a lightweight semantic search system on the 20 Newsgroups dataset (~20k documents).
+It combines vector embeddings, fuzzy clustering, and a semantic cache to retrieve semantically similar documents while avoiding repeated computation for similar queries.
+
+The system is exposed through a FastAPI service.
 
 ## Features
 
